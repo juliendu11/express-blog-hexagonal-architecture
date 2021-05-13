@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+        MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    environment:
+        PMA_HOST: mysql
+        PMA_USER: root
+        PMA_PASSWORD: 123
+    restart: always
+    ports:
+      - "8080:80"
+  mongo:
+    image: mongo:4.4.5
+    ports:
+      - "27017:27017"
+  app:
+    build: .
+    command: npm run start:dev
+    env_file: 
+      - '.env'
+    volumes: 
+      - './src:/usr/src/app/src'
+    depends_on:
+      - mongo
+      - mysql
+    ports:
+      - "3000:3000"
