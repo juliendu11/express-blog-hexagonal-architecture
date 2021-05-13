@@ -36,4 +36,8 @@ Go to [application/api/APIAdapter](https://github.com/juliendu11/express-blog-he
 I did not do all the tests only the use cases in the domain (in TDD)
 
 
-:thinking: I am not 100% sure that I have respected the hexagonal architecture, I am starting in there, I am particularly not sure for the APIAdapter which must inject 3 interfaces which correspond to the 3 use cases, I wonder if it will not take just 1 as for the output port
+:thinking: I am not 100% sure that I have respected the hexagonal architecture, I am starting in there, I am particularly not sure for the APIAdapter which must inject 3 interfaces which correspond to the 3 use cases, I wonder if it will not take just 1 as for the output port.
+
+:thinking: I'm not even sure that the express application should be in "application" but rather in "infrastructure"
+
+**If you are experienced in hexagonal architecture feel free to create an issue to tell me what is wrong :blush:**
