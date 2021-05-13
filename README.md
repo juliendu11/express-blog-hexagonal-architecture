@@ -29,7 +29,7 @@ The classes are very short with an "execute" function because we respect the uni
 
 ## Use
 
-Go to [application/api/APIAdapter](/src/application/api/APIAdapter) to see the call endpoints
+Go to [application/api/APIAdapter](https://github.com/juliendu11/express-blog-hexagonal-architecture/blob/main/src/application/api/APIAdapter.ts) to see the call endpoints
 
 ## Test
 
